@@ -12,8 +12,7 @@ This project is part of the OOP (Object-Oriented Programming) Course taught at I
 - Statistics Window for Management
 
 ## Visuals
-![Blockchain](https://user-images.githubusercontent.com/41153756/104820589-0dec4b80-5836-11eb-9949-d0730b92875b.gif)
-
+![Capture](https://user-images.githubusercontent.com/41153756/105038163-415dee80-5a5f-11eb-9b3d-fc0486ba5ea5.PNG)
 
 ## Usage
 Download the project folder. Open project from folder on your Java IDE. Select EuropeMap folder. Run the app !
