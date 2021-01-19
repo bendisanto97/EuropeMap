@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root_vbox" prefHeight="670.0" prefWidth="962.0" stylesheets="@EuropeMap.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EuropeMap.MapController">
+<children><HBox alignment="CENTER_LEFT" spacing="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children><Label text="Zoom" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Button mnemonicParsing="false" onAction="#zoomOut" text="-" /><Slider fx:id="zoom_slider" blockIncrement="0.1" max="1.5" min="0.5" value="1.0" />
+<Button mnemonicParsing="false" onAction="#zoomIn" text="+" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label fx:id ="welcomeMessage" prefHeight="17.0" prefWidth="197.0" />
+            <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logoutFunction" text="Logout" />
+            <Button fx:id="reviewButton" mnemonicParsing="false" onAction="#leaveReview" text="Review" />
+</children>
+<VBox.margin>
+<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+</VBox.margin>
+</HBox><SplitPane dividerPositions="0.159375, 0.315625" focusTraversable="true" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<items><ListView fx:id="countriesListView" onMouseClicked="#countriesListClicked" SplitPane.resizableWithParent="false" />
+            <ListView fx:id="citiesListView" onMouseClicked="#citiesListClicked" prefHeight="200.0" prefWidth="200.0" SplitPane.resizableWithParent="false" /><ScrollPane fx:id="map_scrollpane" pannable="true" xmlns:fx="http://javafx.com/fxml">
+<content>
+<Pane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<ImageView xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<image>
+<Image url="@../map.png" />
+</image>
+</ImageView><MenuButton fx:id="map_pin" layoutX="88.0" layoutY="100.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="80.0" xmlns:fx="http://javafx.com/fxml">
+<styleClass>
+<String fx:value="menu-button" />
+<String fx:value="map-pin" />
+</styleClass>
+                           <items>
+    <MenuItem fx:id="pin_info" mnemonicParsing="false" text="Action 1">
+                                 <graphic>
+                                    <ImageView fx:id="igm" fitHeight="75.0" fitWidth="75.0">
+                                       <image>
+                                          <Image url="@../flags/flag-fr.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem fx:id="att1" mnemonicParsing="false" onAction="#attractionView" text="Unspecified Action" />
+                              <MenuItem fx:id="att2" mnemonicParsing="false" onAction="#attractionView" text="Unspecified Action" />
+                              <MenuItem fx:id="att3" mnemonicParsing="false" onAction="#attractionView" text="Unspecified Action" />
+                           </items>
+                             
+</MenuButton>
+</children>
+</Pane>
+</content></ScrollPane>
+</items>
+</SplitPane>
+</children>
+</VBox>
