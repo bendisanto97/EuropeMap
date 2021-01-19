@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="963.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EuropeMap.StatsController">
+   <children>
+      <TextArea fx:id="header" editable="false" prefHeight="59.0" prefWidth="963.0" text="STATISTICS">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </TextArea>
+      <TabPane prefHeight="431.0" prefWidth="963.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab closable="false" text="Cities &amp; Age Distribution">
+               <content>
+                  <HBox prefHeight="340.0" prefWidth="963.0">
+                     <children>
+                        <PieChart fx:id="ageDist" labelLineLength="2.0" labelsVisible="false" scaleShape="false" style="-fx-background-color: #C8E5D1; -fx-border-color: #000000; -fx-border-width: 3px;" title="Age Distribution of Visitors">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </PieChart>
+                        <Region prefHeight="411.0" prefWidth="77.0" style="-fx-background-color: #CCCCCC;" />
+                        <VBox>
+                           <children>
+                              <TabPane fx:id="tPane" prefHeight="395.0" prefWidth="388.0" style="-fx-border-color: #000000; -fx-border-width: 3px;">
+                                 <tabs>
+                                    <Tab fx:id="tab5" closable="false" text="Best Cities: Top 5">
+                                       <content>
+                                          <ListView fx:id="cities5" editable="true" maxHeight="356.0" maxWidth="388.0" minHeight="356.0" minWidth="388.0" prefHeight="356.0" prefWidth="388.0" />
+                                       </content>
+                                    </Tab>
+                                    <Tab fx:id="tab10" closable="false" text="Best Cities: Top 10">
+                                       <content>
+                                          <ListView fx:id="cities10" maxHeight="356.0" maxWidth="388.0" minHeight="356.0" minWidth="388.0" prefHeight="356.0" prefWidth="388.0" />
+                                       </content>
+                                    </Tab>
+                                 </tabs>
+                              </TabPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+          </Tab>
+          <Tab closable="false" text="Coutries Distribution">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="292.0" prefWidth="963.0">
+                     <children>
+                        <BarChart fx:id="countryCount" prefHeight="395.0" prefWidth="963.0" style="-fx-border-color: #000000; -fx-border-width: 3px;">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                           <opaqueInsets>
+                              <Insets top="5.0" />
+                           </opaqueInsets>
+                        </BarChart>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <AnchorPane prefHeight="53.0" prefWidth="963.0">
+         <children>
+            <Button layoutX="426.0" layoutY="6.0" mnemonicParsing="false" onAction="#logoutFunction" prefHeight="40.0" prefWidth="111.0" text="Logout" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
