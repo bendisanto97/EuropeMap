@@ -18,7 +18,7 @@ This project is part of the OOP (Object-Oriented Programming) Course taught at I
 Download the project folder. Open project from folder on your Java IDE. Select EuropeMap folder. Run the app !
 
 ## Structure
-
+![Application_UML_Diagram](https://user-images.githubusercontent.com/41153756/105038355-82ee9980-5a5f-11eb-858f-4f0420091497.png)
 
 ## Author
 [Benjamin DI SANTO](https://github.com/bendisanto97)  
